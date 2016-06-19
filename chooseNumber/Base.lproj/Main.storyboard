@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="chooseNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha Um Número!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-fj-INf">
+                                <rect key="frame" x="160" y="107" width="280" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5u-64-rv4">
+                                <rect key="frame" x="40" y="275" width="520" height="50"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="N58-AM-wlV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="UK9-MQ-L0Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="43" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Jogar">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startToPlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="JR4-wN-drT"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="1- Pense em um número entre 1 e 60." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FZN-2u-5n4">
+                                <rect key="frame" x="118" y="350" width="364" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="R8k-mA-b4m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="2- Agora é só começar a jogar." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j8v-no-0eM">
+                                <rect key="frame" x="118" y="400" width="364" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Un0-Mn-Kwr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ouJ-fj-INf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8di-Iy-xWR"/>
+                            <constraint firstItem="FZN-2u-5n4" firstAttribute="centerX" secondItem="l5u-64-rv4" secondAttribute="centerX" id="JLw-7P-wxb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l5u-64-rv4" secondAttribute="trailing" constant="20" id="JkS-eO-b0I"/>
+                            <constraint firstItem="l5u-64-rv4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rks-ok-YuV"/>
+                            <constraint firstItem="FZN-2u-5n4" firstAttribute="height" secondItem="j8v-no-0eM" secondAttribute="height" id="W0a-c7-jaU"/>
+                            <constraint firstItem="l5u-64-rv4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZEG-7v-dg8"/>
+                            <constraint firstItem="j8v-no-0eM" firstAttribute="centerX" secondItem="FZN-2u-5n4" secondAttribute="centerX" id="e1m-5Y-dCB"/>
+                            <constraint firstItem="FZN-2u-5n4" firstAttribute="width" secondItem="l5u-64-rv4" secondAttribute="width" multiplier="0.7" id="g0S-lJ-yZc"/>
+                            <constraint firstItem="j8v-no-0eM" firstAttribute="top" secondItem="FZN-2u-5n4" secondAttribute="bottom" constant="5" id="kKR-de-V8B"/>
+                            <constraint firstItem="j8v-no-0eM" firstAttribute="width" secondItem="FZN-2u-5n4" secondAttribute="width" id="mT2-Pv-GgP"/>
+                            <constraint firstItem="FZN-2u-5n4" firstAttribute="top" secondItem="l5u-64-rv4" secondAttribute="centerY" constant="50" id="qgE-Gf-RzB"/>
+                            <constraint firstItem="l5u-64-rv4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="rar-q5-Y5t"/>
+                            <constraint firstItem="l5u-64-rv4" firstAttribute="top" secondItem="ouJ-fj-INf" secondAttribute="bottom" constant="132" id="zaW-fI-QcP"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="button" destination="l5u-64-rv4" id="TGj-M3-uBc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="305"/>
+        </scene>
+    </scenes>
+</document>
