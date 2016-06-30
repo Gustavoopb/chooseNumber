@@ -57,7 +57,7 @@
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-fK-pfE">
                                 <rect key="frame" x="0.0" y="490" width="480" height="66"/>
                             </adBannerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gameTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-fj-INf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="gameTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-fj-INf">
                                 <rect key="frame" x="235" y="107" width="130" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,7 +82,7 @@
                             <constraint firstItem="8Cg-fK-pfE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="j8v-no-0eM" secondAttribute="bottom" id="mcE-iO-Wzf"/>
                             <constraint firstItem="FZN-2u-5n4" firstAttribute="top" secondItem="l5u-64-rv4" secondAttribute="centerY" constant="50" id="qgE-Gf-RzB"/>
                             <constraint firstItem="l5u-64-rv4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="rar-q5-Y5t"/>
-                            <constraint firstItem="l5u-64-rv4" firstAttribute="top" secondItem="ouJ-fj-INf" secondAttribute="bottom" constant="132" id="zaW-fI-QcP"/>
+                            <constraint firstItem="l5u-64-rv4" firstAttribute="top" relation="lessThanOrEqual" secondItem="ouJ-fj-INf" secondAttribute="bottom" constant="132" id="zaW-fI-QcP"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

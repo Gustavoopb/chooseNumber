@@ -129,4 +129,9 @@ class BoardViewController: AbstractViewController {
         messageFrame!.addSubview(strLabel!)
         viewInsideScroll!.addSubview(messageFrame!)
     }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        self.collectionViewOutlet.reloadData()
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    }
 }
