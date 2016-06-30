@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  chooseNumber
+
+  Created by Gustavo Barbosa on 20/06/16.
+  Copyright © 2016 Gustavoopb. All rights reserved.
+*/
+
+// Main Storyboard
+"gameTitle" = "Escolha um Número!";
+"ruleOne" = "1- Pense um número entre 1 e 60.";
+"ruleTwo" = "2- Jogue e divirta-se.";
+"buttonPlay" = "Jogar";
+
+//Board Storyboard
+
+"topQuestion" = "Seu número está aqui?";
+"buttonYes" = "Sim";
+"buttonNo" = "Não";
+"alertTitle" = "Vamos ver se acertei... ";
+"alertMessage" = "Você pensou no número %d!";
+"buttonPlayAgain" = "Jogar Novamente";
+"buttonQuit" = "Sair";
+
+"loadMessage" = "Deixe-me pensar...";
+
+"blankCard" = "";
+"lastCard" = "Último Card.";
+"fifthCard" = "Quinto Card.";
+"fourthCard" = "Quarto Card.";
+"thirdCard" = "Terceiro Card.";
+"secondCard" = "Segundo Card.";
+"firstCard" = "Primeiro Card.";

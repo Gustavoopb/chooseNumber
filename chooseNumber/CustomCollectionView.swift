@@ -13,18 +13,8 @@ class CustomCollectionView: UICollectionView, UICollectionViewDataSource{
     var card:Card!
     let reuseIdentifier = "cell"
 
-     @IBOutlet weak var widthLayoutConstraint: NSLayoutConstraint? {
-        didSet{
-            self.widthLayoutConstraint!.constant = UIScreen.mainScreen().bounds.width*0.9
-        }
-    }
     @IBOutlet weak var heightLayoutConstraint: NSLayoutConstraint?
     
-    
-    
-//    super.backgroundColor = UIColor.blackColor()
-    
-    // MARK: - UICollectionViewDataSource protocol
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Card.size
     }
@@ -36,5 +26,17 @@ class CustomCollectionView: UICollectionView, UICollectionViewDataSource{
         cell.labelValue.text = self.card.getCardNumbers()[indexPath.item] as? String
         self.heightLayoutConstraint!.constant = collectionView.contentSize.height;
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionElementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "headerBoard", forIndexPath: indexPath) as! CustomCollectionReusableView
+            headerView.label.text = self.card.getCardTitle()
+            headerView.defaultConfig()
+            return headerView
+        default:
+            assert(false, "Unexpected element kind")
+        }
     }
 }

@@ -20,12 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha Um Número!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-fj-INf">
-                                <rect key="frame" x="160" y="107" width="280" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5u-64-rv4">
                                 <rect key="frame" x="40" y="275" width="520" height="50"/>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,7 +30,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="43" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Jogar">
+                                <state key="normal" title="buttonPlay">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -44,7 +38,7 @@
                                     <action selector="startToPlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="JR4-wN-drT"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="1- Pense em um número entre 1 e 60." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FZN-2u-5n4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ruleOne" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FZN-2u-5n4">
                                 <rect key="frame" x="118" y="350" width="364" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="R8k-mA-b4m"/>
@@ -52,7 +46,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="2- Agora é só começar a jogar." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j8v-no-0eM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="ruleTwo" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j8v-no-0eM">
                                 <rect key="frame" x="118" y="400" width="364" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Un0-Mn-Kwr"/>
@@ -60,6 +54,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-fK-pfE">
+                                <rect key="frame" x="0.0" y="490" width="480" height="66"/>
+                            </adBannerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gameTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-fj-INf">
+                                <rect key="frame" x="235" y="107" width="130" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,13 +70,16 @@
                             <constraint firstItem="ouJ-fj-INf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8di-Iy-xWR"/>
                             <constraint firstItem="FZN-2u-5n4" firstAttribute="centerX" secondItem="l5u-64-rv4" secondAttribute="centerX" id="JLw-7P-wxb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l5u-64-rv4" secondAttribute="trailing" constant="20" id="JkS-eO-b0I"/>
+                            <constraint firstItem="8Cg-fK-pfE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="NDh-QW-lcK"/>
                             <constraint firstItem="l5u-64-rv4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rks-ok-YuV"/>
+                            <constraint firstItem="8Cg-fK-pfE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VdH-lD-8Je"/>
                             <constraint firstItem="FZN-2u-5n4" firstAttribute="height" secondItem="j8v-no-0eM" secondAttribute="height" id="W0a-c7-jaU"/>
                             <constraint firstItem="l5u-64-rv4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZEG-7v-dg8"/>
                             <constraint firstItem="j8v-no-0eM" firstAttribute="centerX" secondItem="FZN-2u-5n4" secondAttribute="centerX" id="e1m-5Y-dCB"/>
                             <constraint firstItem="FZN-2u-5n4" firstAttribute="width" secondItem="l5u-64-rv4" secondAttribute="width" multiplier="0.7" id="g0S-lJ-yZc"/>
                             <constraint firstItem="j8v-no-0eM" firstAttribute="top" secondItem="FZN-2u-5n4" secondAttribute="bottom" constant="5" id="kKR-de-V8B"/>
                             <constraint firstItem="j8v-no-0eM" firstAttribute="width" secondItem="FZN-2u-5n4" secondAttribute="width" id="mT2-Pv-GgP"/>
+                            <constraint firstItem="8Cg-fK-pfE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="j8v-no-0eM" secondAttribute="bottom" id="mcE-iO-Wzf"/>
                             <constraint firstItem="FZN-2u-5n4" firstAttribute="top" secondItem="l5u-64-rv4" secondAttribute="centerY" constant="50" id="qgE-Gf-RzB"/>
                             <constraint firstItem="l5u-64-rv4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="rar-q5-Y5t"/>
                             <constraint firstItem="l5u-64-rv4" firstAttribute="top" secondItem="ouJ-fj-INf" secondAttribute="bottom" constant="132" id="zaW-fI-QcP"/>
@@ -82,7 +88,11 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="adBannerView" destination="8Cg-fK-pfE" id="hpQ-Yd-Djo"/>
                         <outlet property="button" destination="l5u-64-rv4" id="TGj-M3-uBc"/>
+                        <outlet property="gameTittle" destination="ouJ-fj-INf" id="Dvk-TM-e41"/>
+                        <outlet property="ruleOne" destination="FZN-2u-5n4" id="nnS-Xv-zA1"/>
+                        <outlet property="ruleTwo" destination="j8v-no-0eM" id="9Kn-6i-b70"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -7,30 +7,33 @@
 //
 
 import UIKit
+import iAd
 
-class ViewController: UIViewController {
+class ViewController: AbstractViewController {
     
-//    @IBOutlet weak var buttonVerticalLayoutConstraint: NSLayoutConstraint!
-    @IBOutlet weak var button: UIButton?
-
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var gameTittle: UILabel!
+    @IBOutlet weak var ruleOne: UITextView!
+    @IBOutlet weak var ruleTwo: UITextView!
+    
     override func viewDidLoad() {
+        button.setTitle(self.localizedString(button.titleLabel!.text!), forState: UIControlState.Normal)
+        ruleOne.text = self.localizedString(ruleOne.text)
+        ruleTwo.text = self.localizedString(ruleTwo.text)
+        gameTittle.text = self.localizedString(gameTittle.text!)
         button!.layer.borderColor = UIColor.lightGrayColor().CGColor
         button!.layer.borderWidth = 2
         button!.layer.cornerRadius = 4
         button!.sizeToFit()
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func startToPlay(){
-        let storyboard = UIStoryboard(name: "BoardViewController", bundle: nil)
-        let board = storyboard.instantiateViewControllerWithIdentifier("BoardViewController") as UIViewController
-        self.presentViewController(board, animated: true, completion: nil)
+        self.callStoryboard("BoardViewController", viewControllerName: "BoardViewController")
     }
 
 }

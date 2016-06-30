@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  chooseNumber
+
+  Created by Gustavo Barbosa on 20/06/16.
+  Copyright © 2016 Gustavoopb. All rights reserved.
+*/
+
+// Main Storyboard
+"gameTitle" = "Choose a Number!";
+"ruleOne" = "1- Choose a number between 1 and 60.";
+"ruleTwo" = "2- Play and have Fun.";
+"buttonPlay" = "Play";
+
+//Board Storyboard
+
+"topQuestion" = "Is your number here?";
+"buttonYes" = "Yes";
+"buttonNo" = "No";
+"alertTitle" = "Let's see if I hit... ";
+"alertMessage" = "You thought %d!";
+"buttonPlayAgain" = "Play Again";
+"buttonQuit" = "Quit";
+
+"loadMessage" = "Let me think...";
+
+"blankCard" = "";
+"lastCard" = "Last Card.";
+"fifthCard" = "Fifth Card.";
+"fourthCard" = "Fourth Card.";
+"thirdCard" = "Third Card.";
+"secondCard" = "Second Card.";
+"firstCard" = "First Card.";

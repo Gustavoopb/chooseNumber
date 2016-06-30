@@ -6,9 +6,11 @@
 //  Copyright © 2016 Gustavoopb. All rights reserved.
 //
 import Foundation
+
 class Card: NSObject {
     private var keyValue:Int!
     private var cardNumbers:NSMutableArray!
+    private var cardTitle: String!
     internal static let size: Int = 30
    
     init(keyValue: Int, cardNumbers: [String]){
@@ -25,5 +27,14 @@ class Card: NSObject {
     
     func getKeyValue() -> Int{
         return self.keyValue
+    }
+    
+    func setCardTitle(cardTitle: String) -> Card{
+        self.cardTitle = cardTitle
+        return self;
+    }
+    
+    func getCardTitle() -> String{
+        return self.cardTitle
     }
 }
